@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery vjezba</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <style>
+
+        button{
+            background-color: #008CBA; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        p{
+            margin-left: 35%;
+            font-size: 13pt;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    <h1 style="color: red; size: 50px; text-align: center;"> LETS PLAY A GAME!!!</h1>
+
+    <button class="btn" style="margin-left: 44%;">Click to play a game.</button>
+
+    <h2 class="game">Guess who is doing their homework at 2 in the morning of the day it's due?</h2>
+
+    <p class="game" id="1">me</p>
+
+    <p class="game" id="2">Me</p>
+
+    <p class="game" id="3" style="color: hotpink;">ME</p>
+
+    <br><br>
+
+    <h2 class="game">Now guess why I'm doing my homework at such a horible time.</h2>
+
+    <p class="game" id="4">I forgot.</p>
+
+    <p class="game" id="5">There was a death in the family.</p>
+
+    <p class="game" id="6">I procrastinate so hard just the effort to procrastinate exhausted me so I said I will do it tomorrow and never did.</p>
+
+    <br><br>
+
+    <button class="game" id="prank" style="margin-left: 42%;">Click here to see something cool.</button>
+
+    <p class="haha" style="font-size: 20pt; margin-left: 30%;">HA HA HA! You expected something cool but it is me, Luigi! Mamma mia!</p>
+
+    <script>
+
+        $(function(){
+
+            // jQuery methods go here...
+
+            $(".game, .haha").hide();
+
+            $(".btn").click(function(){
+
+                $(".game").show();
+
+            });
+
+            $("#prank").click(function(){
+
+                $(".haha").show();
+
+            });
+
+            $("#1").mouseup(function(){
+                alert("CORECT!");
+            });
+
+            $("#2").mouseup(function(){
+                alert("CORECT AGAIN!");
+            });
+
+            $("#3").mouseup(function(){
+                alert("YOU GUESSED IT! IT'S ME!");
+            });
+
+            $("#4").mouseup(function(){
+                alert("NOP, I KNEW ALL THE TIME!");
+            });
+
+            $("#5").mouseup(function(){
+                alert("I wish I had such a good reason.");
+            });
+
+            $("#6").mouseup(function(){
+                alert("RIGHT ON THE MONEY! I DAB TO YOUR GREATNESS!");
+            });
+
+
+
+        });
+        
+    </script>
+    
+</body>
+</html>
